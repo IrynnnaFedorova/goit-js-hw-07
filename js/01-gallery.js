@@ -1,5 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
+console.log(galleryItems)
 const imgList = {
     galleryItems: document.querySelector('.js-gallery'),
     lightbox: document.querySelector('.js-lightbox'),
@@ -69,14 +70,6 @@ function modalEvent(e) {
         if (e.code === "Escape") {
             onCloseModal()
         }
-
-        //if (e.code === "ArrowLeft") {
-         //  switchLeft()
-       // }
-        
-       //if (e.code === "ArrowRight") {
-        //    switchRight()
-        //}
         
     }
 }
