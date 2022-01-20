@@ -7,13 +7,26 @@
     <title>Image gallery</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"/>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
     <!-- Add gallery items to this list -->
-    <div class="gallery"></div>
+    <div class="gallery js-gallery"></div>
 
+
+  <div class="lightbox js-lightbox">
+  <div class="lightbox__overlay"></div>
+
+  <div class="lightbox__content">
+    <img class="lightbox__image" src="" alt="" data-index="0">
+  </div>
+
+  <button type="button" class="lightbox__button" data-action="close-lightbox"></button>
+</div>
+<script src="js/gallery-items.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
     <script src="js/01-gallery.js" type="module"></script>
   </body>
 </html>
