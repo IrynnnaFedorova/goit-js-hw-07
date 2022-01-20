@@ -23,9 +23,8 @@ function createGalleryMarkup(gallery) {
     return gallery
         .map(({ preview, original,description}, idx) => {
             return `
-        <li class="gallery__item">
             <a
-                class="gallery__link"
+                class="gallery__item"
                 href="${original}"
             >
                 <img
@@ -36,17 +35,20 @@ function createGalleryMarkup(gallery) {
                 data-index="${idx}"
                 />
             </a>
-        </li>`;           
+        `;           
 
     })
         .join('');
 }
 
+var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+console.log(lightbox)
+
 
 function onGallaryContainerClick(e) {
     e.preventDefault();
     const swatchGallery = e.target;
-    if (!swatchGallery.classList.contains('gallery__image')) {
+    if (!swatchGallery.classList.contains('gallery__item')) {
         return;
        }
     imgList.lightboxModal.classList.add('is-open');
@@ -79,5 +81,4 @@ function onCloseModal() {
         imgList.lightboxModal.classList.remove('is-open');
         imgList.lightboxImage.src = "";
 }
-
 
