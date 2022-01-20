@@ -7,13 +7,27 @@
     <title>SimpleLightbox library</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.css"/>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
     <!-- Add gallery items to this list -->
-    <ul class="gallery"></ul>
+    <ul class="gallery js-gallery"></ul>
+    
+    
+    <div class="lightbox js-lightbox">
+      <div class="lightbox__overlay"></div>
+    
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" data-index="0">
+      </div>
+    
+      <button type="button" class="lightbox__button" data-action="close-lightbox"></button>
+    </div>
 
     <script src="js/02-lightbox.js" type="module"></script>
+    <script src="js/gallery-items.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
   </body>
 </html>
