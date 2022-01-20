@@ -42,6 +42,7 @@ function createGalleryMarkup(gallery) {
         .join('');
 }
 
+
 function onGallaryContainerClick(e) {
     e.preventDefault();
     const swatchGallery = e.target;
