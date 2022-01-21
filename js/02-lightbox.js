@@ -29,12 +29,14 @@ function createGalleryMarkup(gallery) {
             >
                 <img
                 class="gallery__image"
-                src="${preview}"
-                data-source="${original}"
+                src="${original} "
+                data-source="${preview}"
                 alt="${description}"
-                data-index="${idx}"
+                data-index="${idx} "
+                
                 />
-            </a>
+              <p class="wedo-content">${description}</p>
+           </a>
         `;           
 
     })
@@ -52,8 +54,7 @@ function onGallaryContainerClick(e) {
         return;
        }
     imgList.lightboxModal.classList.add('is-open');
-    
-    imgList.lightboxImage.src = swatchGallery.dataset.source;
+    imgList.lightboxImage.src= swatchGallery.dataset.source;
     imgList.lightboxImage.dataset.index = swatchGallery.dataset.index
 }
 
