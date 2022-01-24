@@ -117,17 +117,3 @@
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.wedo-content {
-  position: absolute;
-  bottom: -15px;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  width: 100%;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  text-transform: uppercase;
-  background: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
-}
