@@ -35,7 +35,6 @@ function createGalleryMarkup(gallery) {
                 data-index="${idx} "
                 
                 />
-              <p class="wedo-content">${description}</p>
            </a>
         `;           
 
@@ -43,7 +42,7 @@ function createGalleryMarkup(gallery) {
         .join('');
 }
 
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+var lightbox = new SimpleLightbox('.gallery a', {captionsData:'alt', captionDelay:250});
 console.log(lightbox)
 
 
